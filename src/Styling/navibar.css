@@ -1,5 +1,17 @@
 #signoutButton {
   margin-left: 0.5em;
-  margin-top: 0.3em;
+  margin-top: 0.5em;
   height: 75%;
+}
+
+#logoimg {
+  width: 1.5em;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #signoutButton {
+    margin-left: 0.75em;
+    margin-top: 0.5em;
+    height: 75%;
+  }
 }

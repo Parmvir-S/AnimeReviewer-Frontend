@@ -16,7 +16,7 @@ function TopAnime() {
         <Card.Img variant="top" src={anime.image} />
         <Card.Body>
           <Card.Title>{anime.title}</Card.Title>
-          <Card.Body>Rating: {anime.reviewSum / anime.reviewCount}</Card.Body>
+          <Card.Body>Rating: {(anime.reviewSum / anime.reviewCount).toFixed(1)}</Card.Body>
           <Button
             variant="danger"
             onClick={() => {

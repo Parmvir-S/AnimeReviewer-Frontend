@@ -1,5 +1,6 @@
-import { Navbar, Nav, Container, Button } from "react-bootstrap";
+import { Navbar, Nav, Container, Button, Image } from "react-bootstrap";
 import "../Styling/navibar.css";
+import APPLOGO from "../Assets/Images/applogo.png";
 
 function Navibar() {
   let isLoggedIn = JSON.parse(localStorage.getItem("Token")) !== null ? true : false;
@@ -14,7 +15,10 @@ function Navibar() {
     <div className="navibar">
       <Navbar bg="dark" variant="dark" sticky="top">
         <Container>
-          <Navbar.Brand href="/">AniMedia</Navbar.Brand>
+          <Navbar.Brand id="aniMedia" href="/"><img
+            id="logoimg"
+            src={APPLOGO}
+          /></Navbar.Brand>
           <Nav className="me-auto">
             {!isLoggedIn ? (
               <>
@@ -33,7 +37,7 @@ function Navibar() {
                   variant="danger"
                   size="sm"
                 >
-                  Sign Out
+                  Logout
                 </Button>
               </>
             )}

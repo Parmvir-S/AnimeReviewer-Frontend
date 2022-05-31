@@ -15,10 +15,9 @@ function Signup() {
       .post("https://ps-animedia.herokuapp.com/users", signupBody)
       .then((res) => {
         console.log(res);
-        alert(`Welcome ${res.data.user.name}`);
         localStorage.setItem("Token", JSON.stringify(res.data.token));
         localStorage.setItem("User", JSON.stringify(res.data.user));
-        window.location.replace("/home");
+        window.location.replace("/topAnime");
       })
       .catch((e) => console.log(e));
   };

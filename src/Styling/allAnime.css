@@ -1,0 +1,67 @@
+.allAnime {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+#link {
+  text-decoration: none;
+  color: rgb(11, 11, 247);
+  font-size: 0.8em;
+}
+
+#searchInput {
+  width: 55%;
+  margin: auto auto;
+  margin-top: 5%;
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#searchButton {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.animeList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: space-between;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.animeList > div {
+  margin: 30px;
+}
+
+#card {
+  text-align: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#scoreInput {
+  width: 50%;
+  margin: auto auto;
+  margin-bottom: 2%;
+  border-radius: 5px;
+}
+
+#reviewInput {
+  width: 75%;
+  height: 100px;
+  margin: auto auto;
+  margin-bottom: 2%;
+  border-radius: 5px;
+}
+
+.modal {
+  text-align: center;
+}
+
+#rateButton {
+  margin-top: 2%;
+}

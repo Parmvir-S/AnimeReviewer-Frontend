@@ -1,0 +1,11 @@
+.login {
+  margin-top: 2%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  text-align: center;
+}

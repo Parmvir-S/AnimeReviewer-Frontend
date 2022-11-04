@@ -20,7 +20,6 @@ function AllAnime() {
     const temp = await fetch(
       `https://api.jikan.moe/v4/anime?q=${animeTitle}&order_by=title&sort=asc&limit=12`
     ).then((res) => res.json());
-    console.log(temp.data)
     setAnimeList(temp.data);
   };
 
@@ -28,7 +27,7 @@ function AllAnime() {
     const url = "https://ps-animedia.herokuapp.com/users/postReview";
     const animeData = {
       title: anime.title,
-      image: anime.image_url,
+      image: anime.images.jpg.image_url,
       reviewCount: 1,
       reviewSum: score,
       review: review,
@@ -49,7 +48,7 @@ function AllAnime() {
 
   const addToFavourites = async (anime) => {
     const url = "https://ps-animedia.herokuapp.com/users/favourites";
-    const data = { title: anime.title, img_url: anime.image_url };
+    const data = { title: anime.title, img_url: anime.images.jpg.image_url };
     console.log(data);
     axios
       .post(url, data, {

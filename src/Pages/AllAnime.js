@@ -18,9 +18,10 @@ function AllAnime() {
 
   const getAnime = async (animeTitle) => {
     const temp = await fetch(
-      `https://api.jikan.moe/v3/search/anime?q=${animeTitle}&order_by=title&sort=asc&limit=12`
+      `https://api.jikan.moe/v4/anime?q=${animeTitle}&order_by=title&sort=asc&limit=12`
     ).then((res) => res.json());
-    setAnimeList(temp.results);
+    console.log(temp.data)
+    setAnimeList(temp.data);
   };
 
   const addReview = (anime) => {
@@ -67,7 +68,7 @@ function AllAnime() {
   const renderAnimeCard = (anime, index) => {
     return (
       <Card id="card" style={{ width: "11rem" }} key={index}>
-        <Card.Img variant="top" src={anime.image_url} />
+        <Card.Img variant="top" src={anime.images.jpg.image_url} />
         <Card.Body>
           <Card.Title>
             <a href={anime.url} id="link" target="_blank" rel="noreferrer">

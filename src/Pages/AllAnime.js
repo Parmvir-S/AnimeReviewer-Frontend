@@ -18,7 +18,7 @@ function AllAnime() {
 
   const getAnime = async (animeTitle) => {
     const temp = await fetch(
-      `https://api.jikan.moe/v4/anime?q=${animeTitle}&order_by=title&sort=asc&limit=12`
+      `https://api.jikan.moe/v4/anime?q=${animeTitle}&sfw&limit=14`
     ).then((res) => res.json());
     setAnimeList(temp.data);
   };

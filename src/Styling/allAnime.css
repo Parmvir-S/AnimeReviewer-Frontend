@@ -65,3 +65,19 @@
 #rateButton {
   margin-top: 2%;
 }
+
+.characterWrapper {
+  display: flex;
+  gap: 1em;
+}
+
+.characterCard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.charImg {
+  width: 110px;
+  height: auto;
+}

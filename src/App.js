@@ -7,6 +7,7 @@ import AllAnime from "./Pages/AllAnime";
 import Favourites from "./Pages/Favourites";
 import TopAnime from "./Pages/TopAnime";
 import Landing from "./Pages/Landing";
+import CharacterPage from "./Pages/CharacterPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/allAnime" element={<AllAnime />} />
           <Route exact path="/favourites" element={<Favourites />} />
           <Route exact path="/topAnime" element={<TopAnime />} />
+          <Route exact path="allAnime/character/:id" element={<CharacterPage />} />
           <Route exact path="/" element={<Landing />} />
         </Routes>
       </Router>

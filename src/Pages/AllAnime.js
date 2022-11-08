@@ -1,12 +1,14 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Form, Button, Card, Modal } from "react-bootstrap";
+import {Link} from 'react-router-dom';
 import "../Styling/allAnime.css";
 
 function AllAnime() {
   const [animeList, setAnimeList] = useState([]);
   const [searchAnime, setSearchAnime] = useState("");
   const [modalData, setModalData] = useState({});
+  const [characterData, setCharacterData] = useState([]);
   const [score, setScore] = useState(0);
   const [review, setReview] = useState("");
 
@@ -64,6 +66,14 @@ function AllAnime() {
       });
   };
 
+  const getCharactersById = async (id) => {
+    const temp = await fetch(
+      `https://api.jikan.moe/v4/anime/${id}/characters`
+    ).then((res) => res.json());
+    const mains = temp.data.filter((character) => character.role === "Main");
+    setCharacterData(mains);
+  };
+
   const renderAnimeCard = (anime, index) => {
     return (
       <Card id="card" style={{ width: "11rem" }} key={index}>
@@ -78,6 +88,7 @@ function AllAnime() {
             id="rateButton"
             variant="danger"
             onClick={() => {
+              getCharactersById(anime.mal_id);
               setModalData(anime);
               handleShow();
             }}
@@ -113,6 +124,27 @@ function AllAnime() {
           <Modal.Title>{modalData.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>{modalData.synopsis}</Modal.Body>
+        <marquee
+          behavior="scroll"
+          scrollamount="5"
+          loop="infinite"
+          direction="left"
+        >
+          <div className="characterWrapper">
+            {characterData.map((character, id) => {
+              return (
+                <div className="characterCard" key={id}>
+                  <Link to={`character/${character.character.mal_id}`}><img
+                    className="charImg"
+                    src={character.character.images.jpg.image_url}
+                    alt="Main Characters"
+                  ></img></Link>
+                  {character.character.name}
+                </div>
+              );
+            })}
+          </div>
+        </marquee>
         <Modal.Body>Episodes: {modalData.episodes}</Modal.Body>
         <Modal.Body>MyAnimeList Score: {modalData.score}</Modal.Body>
 

@@ -1,0 +1,14 @@
+.topAnime {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: space-evenly;
+    justify-content: space-evenly;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 5%;
+  }
+  
+  .topAnime > div {
+    margin: 30px;
+  }

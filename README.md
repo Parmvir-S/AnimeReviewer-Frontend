@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# AniMedia
+![facebook_cover_photo_1](https://user-images.githubusercontent.com/70659748/207225784-8d3cd428-2144-4a98-8645-f2956e8b5955.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+AniMedia is a web application that allows users to review anime that they have watched. Users can search any anime they would like, add it to their favourites page, give it a rating and even leave a review. All of the top rated animes on AniMedia can be viewed on the main page along with the ratings if the button underneath the anime is clicked. The anime search functionality also allows users to view information about the main characters of that anime.
 
-## Available Scripts
+## Motivation
 
-In the project directory, you can run:
+The main motivation for this anime reviewing application was to provide my siblings and cousins a place to review the anime they have watched and keep track of them through their favourites page. By having a rating and reviewing system, all of the kids in my family are able to better gauge what they want to watch next. Also in the future all of us can look back at the reviews we left and the animes we watched.
 
-### `npm start`
+## Tech Stack
+MongoDB, Express, Node and React
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Challenges
+I had a hard time figuring out how I wanted to store JWT tokens in the frontend so I can use them as a part of the requests I make to the backend. With the options of local storage, session storage and cookies I decided to go with local storage since it was something I was familiar with.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Another challenge was to get the data of the clicked anime into the model to display. The mapping technique I used to render the anime cards made this process quite confusing but I managed to come up with a solution that used useState.
 
-### `npm test`
+## Accomplishments
+I managed to complete a full stack project from start to finish. It is now running and being used by 10+ people who have viewed, rated, reviewed and favourited anime already!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Future Improvements
+In terms of a security aspect, I could store the JWT tokens in cookies rather than local storage or session storage. Even though session storage data is cleared when the session ends it doesn't completely remove the risk of token theft. I believe that with HttpOnly cookies, it will be much safer from attackers.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Link To Backend Code
+https://github.com/Parmvir-S/AnimeReviewer-Backend 

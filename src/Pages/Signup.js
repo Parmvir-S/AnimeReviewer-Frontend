@@ -12,7 +12,7 @@ function Signup() {
   const signUpFunc = () => {
     const signupBody = { name: name, email: email, password: password };
     axios
-      .post("https://ps-animedia.herokuapp.com/users", signupBody)
+      .post("http://localhost:3001/users", signupBody)
       .then((res) => {
         console.log(res);
         localStorage.setItem("Token", JSON.stringify(res.data.token));

@@ -20,7 +20,7 @@ function Favourites() {
 
   useEffect(() => {
     const getFavourites = async () => {
-      const url = "https://ps-animedia.herokuapp.com/users/getFavourites";
+      const url = "http://localhost:3001/users/getFavourites";
       axios
         .get(url, {
           headers: {

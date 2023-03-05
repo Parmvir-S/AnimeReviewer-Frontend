@@ -26,7 +26,7 @@ function AllAnime() {
   };
 
   const addReview = (anime) => {
-    const url = "https://ps-animedia.herokuapp.com/users/postReview";
+    const url = "http://localhost:3001/users/postReview";
     const animeData = {
       title: anime.title,
       image: anime.images.jpg.image_url,
@@ -49,7 +49,7 @@ function AllAnime() {
   };
 
   const addToFavourites = async (anime) => {
-    const url = "https://ps-animedia.herokuapp.com/users/favourites";
+    const url = "http://localhost:3001/users/favourites";
     const data = { title: anime.title, img_url: anime.images.jpg.image_url };
     console.log(data);
     axios

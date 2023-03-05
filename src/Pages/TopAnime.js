@@ -36,7 +36,7 @@ function TopAnime() {
 
   useEffect(() => {
     const getTopAnime = async () => {
-      const url = "https://ps-animedia.herokuapp.com/users/getTopAnime";
+      const url = "http://localhost:3001/users/getTopAnime";
       axios
         .get(url, {
           headers: {

@@ -29,7 +29,7 @@ function Profile() {
   const updateName = () => {
     const data = { name: name };
     axios
-      .patch("https://ps-animedia.herokuapp.com/users/profile", data, {
+      .patch("http://localhost:3001/users/profile", data, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

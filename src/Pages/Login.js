@@ -11,7 +11,7 @@ function Login() {
   const loginFunc = () => {
     const loginBody = { email: email, password: password };
     axios
-      .post("https://ps-animedia.herokuapp.com/users/login", loginBody)
+      .post("http://localhost:3001/users/login", loginBody)
       .then((res) => {
         console.log(res);
         localStorage.setItem("Token", JSON.stringify(res.data.token));

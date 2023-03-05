@@ -19,7 +19,7 @@ function Signup() {
         localStorage.setItem("User", JSON.stringify(res.data.user));
         window.location.replace("/topAnime");
       })
-      .catch((e) => console.log(e));
+      .catch((e) => console.log(e))
   };
 
   return (
